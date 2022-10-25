@@ -7,14 +7,14 @@
 #  $ sudo -H pip install jira
 #
 # Sample Usage
-#  $./fh-jira-manager.py --action target --server https://issues.redhat.com \
-#     --username jmernin --token ********** [--password ******] --project FHOPS
-#  $./fh-jira-manager.py --action issue-<create|delete|read> --key FHOPS-456
+#  $./jirafly.py --action target --server https://issues.redhat.com \
+#     --username jmernin --token ********** [--password ******] --project ACME
+#  $./jirafly.py --action issue-<create|delete|read> --key ACME-123
 #
 # References
 # - https://pythonhosted.org/jira/index.html?highlight=create_issue#examples
 #
-# Copyright (c) 2017, Red Hat, Inc.
+# Copyright (c) 2017, James Mernin
 #
 ######################################################################
 
@@ -38,8 +38,8 @@ DEBUG = 0
 QUIET = 1
 
 MYHOME           = os.environ['HOME']
-CACHED_CREDS     = MYHOME + "/.rhm/jira.creds"
-JIRA_TEMPLATES   = MYHOME + "/.rhm/roms-templates.json"
+CACHED_CREDS     = MYHOME + "/.jf/jira.creds"
+JIRA_TEMPLATES   = MYHOME + "/.jf/templates.json"
 
 CMD_TARGET       = "target"
 
